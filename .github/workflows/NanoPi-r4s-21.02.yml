@@ -92,7 +92,6 @@ jobs:
           mkdir ./artifact/
           cp build/openwrt/.config ./artifact/
           cat build/openwrt/.config
-          exit 1
           
       - name: Download package
         id: package
