@@ -41,7 +41,7 @@ jobs:
           echo "UPLOAD_BIN_DIR=false" >> $GITHUB_ENV
           echo "UPLOAD_FIRMWARE=true" >> $GITHUB_ENV
           echo "UPLOAD_RELEASE=true" >> $GITHUB_ENV
-          echo "TZ=Europe/Paris" >>$GITHUB_ENV
+          echo "TZ=America/Chicago" >>$GITHUB_ENV
           echo "Build_Date=$(date +%Y.%m.%d)" >> $GITHUB_ENV
           echo "RELTAG=v$(date +'%Y%m%d.%H%M%S')" >> $GITHUB_ENV
           
