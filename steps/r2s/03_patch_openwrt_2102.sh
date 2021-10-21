@@ -32,7 +32,8 @@ rm target/linux/rockchip/patches-5.4/805*       # kernel oops, remove !!!
 #rm target/linux/rockchip/patches-5.4/806*
 #rm target/linux/rockchip/patches-5.4/807*
 #rm target/linux/rockchip/patches-5.4/808*
-rm target/linux/rockchip/patches-5.4/9*
+rm target/linux/rockchip/patches-5.4/911*
+rm target/linux/rockchip/patches-5.4/991*
 #rm target/linux/rockchip/patches-5.4/992*  #only for r4s, to test
 
 # revert to openwrt target/linux/rockchip/image/armv8.mk
