@@ -136,13 +136,13 @@ jobs:
           cp build/openwrt/ao-mini.config ./artifact/
           cd ./artifact/
           ls -Ahl
-          mv openwrt-rockchip-armv8-friendlyarm_nanopi-r4s-ext4-sysupgrade.img.gz OpenWrt-AO-21.02-$RELTAG-NanoPi-r4s-ext4-mini.img.gz
-          mv openwrt-rockchip-armv8-friendlyarm_nanopi-r4s-squashfs-sysupgrade.img.gz OpenWrt-AO-21.02-$RELTAG-NanoPi-r4s-squashfs-mini.img.gz
+          mv openwrt-rockchip-armv8-friendlyarm_nanopi-r4s-ext4-sysupgrade.img.gz OpenWrt-KD-21.02-$RELTAG-NanoPi-r4s-ext4.img.gz
+          mv openwrt-rockchip-armv8-friendlyarm_nanopi-r4s-squashfs-sysupgrade.img.gz OpenWrt-KD-21.02-$RELTAG-NanoPi-r4s-squashfs.img.gz
           gzip -d *.gz && exit 0
           gzip --best *.img
           ls -Ahl
-          zip OpenWrt-AO-21.02-$RELTAG-NanoPi-r4s-ext4-mini.zip *r4s*ext4*ini*
-          zip OpenWrt-AO-21.02-$RELTAG-NanoPi-r4s-squashfs-mini.zip *r4s*squashfs* ini*
+          zip OpenWrt-AO-21.02-$RELTAG-NanoPi-r4s-ext4.zip *r4s*ext4*ini*
+          zip OpenWrt-AO-21.02-$RELTAG-NanoPi-r4s-squashfs.zip *r4s*squashfs* ini*
           cp ../build/openwrt/*.config ./
           ls -Ahl
       
@@ -160,9 +160,9 @@ jobs:
         with:
           name: OpenWrt 21.02 ${{ env.RELDATE }} 
           allowUpdates: true
-          tag: r2s-21.02-${{ env.RELDATE }}
+          tag: r4s-21.02-${{ env.RELDATE }}
           commit: main
           replacesArtifacts: true
           token: ${{ secrets.GITHUB_TOKEN }}
-          bodyFile: "release-info-r2s-21.02.md"
+          bodyFile: "release-info-r4s-21.02.md"
           artifacts: ./artifact/*.zip
