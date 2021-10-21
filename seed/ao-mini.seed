@@ -1,6 +1,7 @@
 CONFIG_TARGET_rockchip=y
 CONFIG_TARGET_rockchip_armv8=y
 CONFIG_TARGET_rockchip_armv8_DEVICE_friendlyarm_nanopi-r4s=y
+CONFIG_TARGET_DEVICE_rockchip_armv8_DEVICE_friendlyarm_nanopi-r4s=y
 CONFIG_EXTRA_OPTIMIZATION="-fno-caller-saves -fno-plt -mcpu=cortex-a73.cortex-a53+crypto+crc"
 CONFIG_TARGET_OPTIONS=y
 CONFIG_TARGET_OPTIMIZATION="-O2 -pipe -mcpu=cortex-a73.cortex-a53+crypto+crc"
