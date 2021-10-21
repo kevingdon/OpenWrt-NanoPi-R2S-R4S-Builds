@@ -44,6 +44,7 @@ jobs:
           echo "TZ=America/Chicago" >>$GITHUB_ENV
           echo "Build_Date=$(date +%Y.%m.%d)" >> $GITHUB_ENV
           echo "RELTAG=v$(date +'%Y%m%d.%H%M%S')" >> $GITHUB_ENV
+          echo "RELDATE=v$(date +'%Y%m%d')" >> $GITHUB_ENV
           
       - name: Show env
         run: echo $GITHUB_ENV
