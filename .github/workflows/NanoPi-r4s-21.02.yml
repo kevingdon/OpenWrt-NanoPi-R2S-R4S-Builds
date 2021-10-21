@@ -2,7 +2,7 @@
 # Description: Build OpenWrt using GitHub Actions
 # Lisence: MIT
 
-name: NanoPi R2S 21.02
+name: NanoPi R4S 21.02
 
 on:
 #  release:
@@ -77,7 +77,7 @@ jobs:
       - name: Make working copy of OpenWrt source
         run: |
           /bin/bash ./steps/02_prepare_openwrt_folder_2102.sh
-      - name: Patch OpenWrt source R2S / 21.02
+      - name: Patch OpenWrt source R4S / 21.02
         run: |
           /bin/bash ./steps/r2s/03_patch_openwrt_2102.sh
       - name: Prepare package
@@ -89,6 +89,8 @@ jobs:
       - name: Load ao mini Config
         run: |
           /bin/bash ./steps/06-create_config_from_mini_seed.sh
+          cp build/openwrt/ao-mini.config ./artifact/
+          cat build/openwrt/ao-mini.config
           exit 1
           
       - name: Download package
