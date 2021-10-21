@@ -62,9 +62,7 @@ cp $ROOTDIR/patches/kernel-5.4/001-r8152-v1-11-11.patch target/linux/rockchip/pa
 
 # usb3 phy driver
 # cleanup immortalwrt
-rm target/linux/rockchip/patches-5.4/808*
 #rm target/linux/rockchip/files/drivers/phy/rockchip/phy-rockchip-inno-usb3.c
-rm target/linux/rockchip/Documentation/devicetree/bindings/phy/phy-rockchip-inno-usb3.yaml
 
 #copy crafted patch
 cp $ROOTDIR/patches/kernel-5.4/add-rk3328-usb3-phy-driver.patch target/linux/rockchip/patches-5.4/808-add-rk3328-usb3-phy-driver.patch
