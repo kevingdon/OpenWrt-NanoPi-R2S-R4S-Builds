@@ -142,8 +142,8 @@ jobs:
           gzip -d *.gz && exit 0
           gzip --best *.img
           ls -Ahl
-          zip OpenWrt-AO-21.02-$RELTAG-NanoPi-r4s-ext4.zip *r4s*ext4*
-          zip OpenWrt-AO-21.02-$RELTAG-NanoPi-r4s-squashfs.zip *r4s*squashfs*
+          zip OpenWrt-KD-21.02-$RELTAG-NanoPi-r4s-ext4.zip *r4s*ext4*
+          zip OpenWrt-KD-21.02-$RELTAG-NanoPi-r4s-squashfs.zip *r4s*squashfs*
           cp ../build/openwrt/*.config ./
           ls -Ahl
       
